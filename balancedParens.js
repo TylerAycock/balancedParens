@@ -24,3 +24,32 @@ const balanced = str =>{
 
 console.log(balanced(sample3))
 
+const balancedBrackets = str =>{
+    brackets = {
+        paranthesis: [0,0],
+        squareBrackets: [0,0],
+        curlyBraces: [0.0]
+    }
+    for (let i = 0; i<str.length; i++){
+        if(str[i] === `(` || str[i]===`)`){
+            if (str[i]===`(`){
+                brackets[`parenthesis`][0]++
+            }else {
+                bracekts[`parenthesis`][1]++
+            }
+        }else if (str[i]===`[` || str[i]===`]`){
+            if (str[i]===`[`){
+                brackets[`squareBracekts`][0]++
+            }else {
+                bracekts[`squareBrackets`][1]++
+            }
+        } else if (str[i]===`{`|| str[i]===`}`){
+            if (str[i]===`{`){
+                brackets[`curlyBraces`][0]++
+            }else {
+                bracekts[`curlyBraces`][1]++
+            }
+        }
+    }
+}
+
